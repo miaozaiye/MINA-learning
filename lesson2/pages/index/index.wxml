@@ -1,0 +1,15 @@
+<!--index.wxml-->
+
+<view class="section">
+请输入你的数字
+  <input  bindinput="changenumber" placeholder="输入10 上下的数字看看" />
+
+  <button bindtap="calc" > 计算</button>
+  <view> 
+  
+
+  {{origin}} is {{relation}} than 10, so result is {{result}}
+
+
+  </view>
+</view>
