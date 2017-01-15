@@ -29,21 +29,21 @@ Page({
         }
         
     
-    console.log('result', calcData.result);
-  
+     console.log('result', calcData.result);
+     this.setData({result:calcData.result,origin:calcData.origin,relation:calcData.relation})
 
   },
 
-  calc:function(e) {
-    console.log('tap event',e);
-    console.log('result is',calcData.result);
+//   calc:function(e) {
+//     console.log('tap event',e);
+//     console.log('result is',calcData.result);
     
-    this.setData({result:calcData.result,origin:calcData.origin,relation:calcData.relation})
+//     this.setData({result:calcData.result,origin:calcData.origin,relation:calcData.relation})
     
   
     
-    // this.setData({tapCount:calcData.tapCount})
-  }
+//     // this.setData({tapCount:calcData.tapCount})
+//   }
 
 }
 )
