@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<view wx:for="{{array1}}" wx:for-item = "i">
+  
+  {{index}}: {{i.name}} is {{i.message}}
+</view>
+
+<view class="section">
+  <view class="section__title">你输入的是：{{inputValue}}</view>
+  <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+</view>
+
+
+<view class="section">
+  <input bindinput="inputlength" placeholder="请输入length" auto-focus/>
+
+<view wx:if="{{length >5}}"> {{length -5}} </view>
+<view wx:elif="{{length> 2}}"> 2 </view>
+<view wx:else> 3 </view>
+
+</view>
+
+<view wx:for="{{array}}" wx:for-item="i">
+  <view wx:for="{{array}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
