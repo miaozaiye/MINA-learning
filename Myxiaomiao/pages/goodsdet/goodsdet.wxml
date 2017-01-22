@@ -1,0 +1,40 @@
+<view class="myblock">
+  <view>
+    <image class="det-img" src="{{detList.logo_url}}" />
+  </view>
+  <view class="gdet-title">
+    <text class="price-sale">限时特价</text> {{detList.title}}</view>
+  <view class="gdet-price">￥{{detList.price}}
+    <text>￥240</text>
+  </view>
+  <view class="gdet-chosebox">
+
+    <!--商品型号-->
+    <view class="gdet-boxper">
+      <label>颜色分类</label>
+      <view class="gdet-pertype {{colorSelected[index].selected?'active':''}}" bindtap="colorSelected" wx:key="index" wx:for="{{detList.spec[1]}}" data-index="{{index}}">{{item.name}}</view>
+      <label style="margin-top:10px;">商品型号</label>
+      <view class="gdet-pertype {{modelSelected[index].selected?'active':''}}" bindtap="modelSelected" wx:key="index" wx:for="{{detList.spec[2]}}" data-index="{{index}}">{{item.name}}</view>
+    </view>
+    <view class="gdet-boxpernum">
+      <label>购买数量</label>
+
+      <!-- Stepper容器 -->
+      <view class="stepper gdet-boxperinner">
+
+        <!-- 减号 -->
+        <text class="{{minusStatus}} gdet-pernum-minus" bindtap="bindMinus">-</text>
+
+        <!-- 数值 -->
+        <input class="gdet-pernum" type="number" bindchange="bindManual" value="{{num}}" />
+
+        <!-- 加号 -->
+        <text class="gdet-pernum-plus normal" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+  </view>
+  <text class="gdet-der">{{detList.detail}}</text>
+  <view class="my-navarbot">
+    <button bindtap="toBuy" type="primary" hover-class="myhover-btn">加入购物车</button>
+  </view>
+</view>

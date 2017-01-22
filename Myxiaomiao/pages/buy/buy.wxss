@@ -1,0 +1,123 @@
+/* pages/buy/buy.wxss */
+
+.myblock {
+  width: 100%;
+}
+
+.buy-list {
+  padding: 10px 15px;
+  margin-top: 15px;
+  background: #f3f3f3;
+}
+
+.buy-listimg {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+.buy-listdet {
+  width: calc(100% - 90px);
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.buy-listdet .title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #5a5a5a;
+}
+
+.buy-perwarp {
+  margin-top: 10px;
+  color: #7f7f7f;
+}
+
+/*.buy-btnbox{width:100%;display:table;table-layout: fixed;height: 50px;position: fixed;bottom: 0px;}
+.buy-btnbox view{display:table-cell;height: 100%;width:100%;vertical-align: middle;text-align: center;}*/
+
+.buy-btnbox {
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.buy-btnbox button {
+  width: 100%;
+  background: #dea639;
+  border: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.buy-perinfo {
+  margin-right: 10px;
+}
+
+.buy-perprice {
+  color: #323232;
+  float: right;
+  font-weight: bold;
+}
+
+/*新增收货地址*/
+
+.address-addline {
+  display: block;
+  text-align: center;
+  background: #fff;
+  padding: 25px 15px 15px 15px;
+  color: #dea639;
+}
+
+.address-warp {
+  padding: 0px 15px;
+  margin-top: 15px;
+  background: #f3f3f3;
+  position: relative;
+}
+
+.address-warp-per {
+  padding: 5px 0;
+  display: flex;
+}
+
+.address-warp-per .title {
+  width: 80px;
+  color: #7f7f7f;
+}
+
+.address-warp-per .det-info {
+  flex: 1;
+  color: #5a5a5a;
+}
+
+.address-morelist {
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  text-align: right;
+  font-weight: 800;
+}
+
+/*订单总额*/
+
+.buy-sum {
+  padding: 10px 15px;
+  text-align: right;
+}
+
+.buy-sum  view {
+  color: #5a5a5a;
+  margin-top: 10px;
+}
+
+.buy-sum  view  text {
+  color: #dea639;
+  font-weight: 800;
+}

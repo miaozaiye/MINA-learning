@@ -1,0 +1,64 @@
+/* pages/login/login.wxss */
+
+page {
+  background: #f3f3f3;
+}
+
+.myblock {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.login-group {
+  border-bottom: 1px solid #dedede;
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+  padding: 0px 15px;
+  display: flex;
+  position: relative;
+}
+
+.login-title {
+  width: 60px;
+}
+
+.login-title.tel-prdfix {
+  border-right: 1px solid #e7e7e7;
+  font-weight: bold;
+}
+
+.login-input {
+  width: calc(100% -61px);
+  float: left;
+  height: 2.4rem;
+  margin-left: 5%;
+  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+}
+
+.login-inputcode {
+  width: 75%;
+  float: left;
+  height: 2.4rem;
+  margin-left: 5%;
+}
+
+.tel-city {
+  margin-left: 20px;
+  color: #323232;
+}
+
+.add-btnbox {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.add-btnbox button {
+  width: 100%;
+  background: #dea639;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+}

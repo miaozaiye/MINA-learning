@@ -1,0 +1,43 @@
+<view class="myblock">
+
+  <!--我的订单导航条-->
+  <ul class="my-naver">
+    <li bindtap="selected1" class="{{selected1?'active':''}}">
+      <view>全部</view>
+    </li>
+    <li bindtap="selected2" class="{{selected2?'active':''}}">
+      <view>待支付</view>
+    </li>
+    <li bindtap="selected3" class="{{selected3?'active':''}}">
+      <view>已支付</view>
+    </li>
+  </ul>
+  <view wx:if="{{orderList!=null&&orderList.length>0}}">
+    <view class="myindex-list" wx:for="{{orderList}}" wx:key="unique">
+      <view class="myindex-ordernum">订单号：{{item.order_no}}
+        <button wx:if="{{item.status  == 1}}" hover-class="myhover-btn" size="mini" class="paybtn" data-orderid="{{item.id}}" bindtap="toPay">去支付</button>
+      </view>
+      <view class="myindex-listinner" data-id="{{item.id}}">
+        <image class="myindex-listimg" src="{{item.goods_info.logo_url}}" />
+        <view class="myindex-listdet">
+          <text class="title">{{item.title}}</text>
+          <view class="myindex-perwarp">
+            <label class="myindex-perinfo">型号：{{item.goods_spec_id}}</label>
+            <label class="myindex-perinfo">数量:{{item.number}}</label>
+          </view>
+          <view class="myindex-perwarp">
+            <label class="myindex-perprice">￥{{item.real_price}}</label>
+          </view>
+        </view>
+      </view>
+      <view class="myindex-orderdet">
+        <text class="order-p">收货人:{{item.address_name}}</text>
+        <text class="order-t">{{item.update_time}}</text>
+      </view>
+    </view>
+  </view>
+	<view  wx:else   >
+    <button class="loginTitle" bindtap="login"> {{loginTitle}}</button>
+</view>
+    
+</view>

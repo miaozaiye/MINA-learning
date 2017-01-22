@@ -1,0 +1,52 @@
+<view class="myblock">
+  <text class="pay-title">
+    <text></text>收货地址</text>
+
+  <!--收货地址为空-->
+  <view wx:if="{{!selectedaddress.address_id}}" class="address-addline" bindtap="toAddress">
+    新增收货地址
+  </view>
+
+  <!--收货地址不为空时--默认显示第一个地址-->
+  <view wx:else class="address-warp">
+    <view class="address-warp-per">
+      <text class="title">收货人：</text>
+      <text class="det-info">{{selectedaddress.name}}</text>
+    </view>
+    <view class="address-warp-per">
+      <text class="title">联系方式：</text>
+      <text class="det-info">{{selectedaddress.mobile}}</text>
+    </view>
+    <view class="address-warp-per">
+      <text class="title">详细地址：</text>
+      <text class="det-info">{{selectedaddress.address}}{{selectedaddress.detailed_address}}</text>
+    </view>
+    <view>
+      <navigator class="address-morelist" url="../address/address">></navigator>
+    </view>
+  </view>
+  <text class="pay-title">
+    <text></text>商品信息</text>
+  <view class="buy-list">
+    <image class="buy-listimg" src="{{selectedcart.logo_url}}" />
+    <view class="buy-listdet">
+      <text class="title">{{selectedcart.title}}</text>
+      <view class="buy-perwarp">
+        <label class="buy-perinfo">型号：{{selectedcart.goods_spec_id}}</label>
+        <label class="buy-perinfo">数量：{{selectedcart.buynumber}}个</label>
+      </view>
+      <view class="buy-perwarp">
+        <label class="buy-perprice">￥{{selectedcart.price}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="buy-sum">
+    <view>商品总金额：
+      <text>￥{{selectedcart.real_price}}</text>
+    </view>
+    <view>共{{selectedcart.buynumber}}件</view>
+  </view>
+  <view class="buy-btnbox">
+    <button bindtap="toPay" type="primary" hover-class="myhover-btn">去支付</button>
+  </view>
+</view>

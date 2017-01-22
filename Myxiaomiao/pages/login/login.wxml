@@ -1,0 +1,23 @@
+<view class="myblock">
+  <form class="login-form" catchsubmit="" catchreset="formReset">
+    <view class="login-group">
+      <text>国家/地区</text>
+      <text class="tel-city">中国</text>
+      <view class="more-triangle"></view>
+    </view>
+    <view class="login-group clearfix">
+      <label class="login-title tel-prdfix">+86</label>
+      <input bindinput="bindTelInput" class="login-input" name="name" value="{{username}}" placeholder="请填写手机号" placeholder-style="color:#bbbbbb;" />
+    </view>
+    <view class="login-group">
+      <label class="login-title">密码</label>
+      <input bindinput="bindPasswordInput" type="password" maxlength="18" class="login-inputcode" value="{{password}}" placeholder="请填写密码" placeholder-style="color:#bbbbbb;" name="password" />
+    </view>
+    <view class="add-btnbox">
+      <button bindtap="toNext" formType="submit" type="primary">下一步</button>
+    </view>
+  </form>
+</view>
+<modal class="modal" hidden="{{alertHidden}}" no-cancel bindconfirm="hideAlertView">
+  <view>{{alertTitle}}</view>
+</modal>

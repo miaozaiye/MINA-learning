@@ -1,0 +1,34 @@
+<view class="myblock">
+  <form class="address-form" catchsubmit="formSubmit" catchreset="formReset">
+    <view class="add-form-group">
+      <label class="add-form-title">收货人</label>
+      <input bindinput="bindNameInput" class="add-form-input" name="name" value="{{name}}" placeholder="姓名" placeholder-style="color:#bbbbbb;" />
+    </view>
+    <view class="add-form-group">
+      <label class="add-form-title">联系电话</label>
+      <input bindinput="bindPhoneInput" class="add-form-input" name="phone" value="{{phone}}" placeholder="手机或固话" placeholder-style="color:#bbbbbb;" />
+    </view>
+    <view class="add-form-group">
+      <label class="add-form-title">选择地区</label>
+      <input bindinput="bindAddressInput" class="add-form-input" name="address" value="{{address}}" placeholder="地区信息" placeholder-style="color:#bbbbbb" />
+      <text class="more-triangle"></text>
+    </view>
+    <view class="add-form-group">
+      <label class="add-form-title">详细地址</label>
+      <input bindinput="bindAddressdetInput" class="add-form-input" name="addressdet" value="{{addressdet}}" placeholder="街道门牌信息" placeholder-style="color:#bbbbbb;" />
+    </view>
+    <view class="add-form-group">
+      <label class="add-form-title">邮政编码</label>
+      <input bindinput="bindPostcodeInput" class="add-form-input" name="postcode" value="{{postcode}}" />
+    </view>
+    <view class="add-btnbox">
+      <button formType="submit" type="primary" bindtap="save">确认</button>
+    </view>
+  </form>
+</view>
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="hideModal">
+  <view>添加成功</view>
+</modal>
+<modal class="modal" hidden="{{alertHidden}}" no-cancel bindconfirm="hideAlertView">
+  <view>{{alertTitle}}</view>
+</modal>

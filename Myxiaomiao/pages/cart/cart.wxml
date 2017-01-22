@@ -1,0 +1,38 @@
+<view class="carts-list">
+
+	<view wx:if="{{carts.length>0}}"> 
+    <view class="cart clearfix" wx:for="{{carts}}" wx:key="unique"  id="cart_{{item.id}}">
+		<view class="cart-edit"> <button data-index="{{item.id}}" type="default" size="mini" bindtap="toDelete">删除</button></view>
+		<icon class="cart-checkbox" wx:if="{{checkedArr[index]}}" type="success_circle" size="26" data-id="cart_{{item.id}}" data-index="{{index}}" bindtap="bindCheckbox" />
+		<icon class="cart-checkbox" wx:else type="circle" size="26" data-id="cart_{{item.id}}" data-index="{{index}}" bindtap="bindCheckbox" />
+		<view class="cart-text clearfix">
+			<image class="cart-img" src="{{item.goods_info.logo_url}}" id="{{item.id}}" bindtap="toDetail"></image>
+			<view class="cart-detright">
+				
+				<text class="cart-title" id="{{item.id}}" bindtap="toDetail">{{item.goods_info.title}}</text>
+				<p class="p1">型号：{{item.goods_spec_id}}</p>
+					<view class="cart-price-box">
+						<label>￥{{item.goods_info.price}}</label>
+						<!--编辑时显示-->
+						<view class="cart-number">
+							<text class="minus" bindtap="bindMinus" data-index="{{index}}">-</text>
+							<input class="number" type="number" data-index="{{index}}" value="{{numberArr[index]}}" bindchange="changeNum"></input>
+							<text class="add" bindtap="bindAdd" data-index="{{index}}">+</text>
+						</view>
+					</view>	
+			</view>			
+		</view>
+    </view>
+
+    <view class="pay-box">
+
+		<text class="all-icon">合计：￥{{count}}</text>
+		<button type="default" size="mini" class="pay-btn" bindtap="toPay" hover-class="custom-button-hover-class">去结算({{totalNum}})</button>	
+    </view>
+	
+
+</view>
+<view  wx:else>
+    <button class="loginTitle" bindtap="login"> {{loginTitle}}</button>
+</view>
+</view>

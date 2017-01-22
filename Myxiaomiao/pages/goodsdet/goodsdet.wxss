@@ -1,0 +1,189 @@
+/* pages/goodsdet/goodsdet.wxss */
+
+page {
+  background: #f3f3f3;
+}
+
+.myblock {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.det-img {
+  width: 100%;
+}
+
+.gdet-title {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 10px 15px;
+  margin-top: 6px;
+  background: #fff;
+}
+
+.gdet-price {
+  font-size: 18px;
+  padding: 0px 15px 10px 15px;
+  background: #fff;
+  color: #323232;
+  font-weight: bold;
+}
+
+.gdet-price text {
+  font-size: 14px;
+  background: #fff;
+  color: #aaa;
+  text-decoration: line-through;
+  font-weight: normal;
+  display: none;
+}
+
+.price-sale {
+  font-size: 12px;
+  background: #ed4a5b;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.gdet-chosebox {
+  margin-top: 10px;
+}
+
+.gdet-boxper {
+  padding-bottom: 10px;
+  padding: 10px 15px 15px 15px;
+  background: #fff;
+}
+
+.gdet-boxper label {
+  display: block;
+  color: #323232;
+  font-size: 14px;
+}
+
+.gdet-boxper .gdet-pertype {
+  padding: 6px 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background: #eee;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #515151;
+}
+
+.gdet-boxper .gdet-pertype.active {
+  color: #cacaca;
+  background: #323232;
+}
+
+/*购买数量*/
+
+.gdet-boxpernum {
+  margin-top: 1px;
+  padding: 10px 15px;
+  background: #fff;
+  display: flex;
+}
+
+.gdet-boxpernum label {
+  width: 80px;
+  font-size: 14px;
+  line-height: 34px;
+  color: #323232;
+}
+
+.gdet-boxperinner {
+  flex: 1;
+  line-height: 34px;
+  text-align: right;
+}
+
+.gdet-pernum-minus {
+  display: inline-block;
+  background: #eee;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 2px;
+  color: #aaa;
+  line-height: 30px;
+}
+
+.gdet-pernum-plus {
+  display: inline-block;
+  background: #eee;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 2px;
+  color: #aaa;
+  line-height: 30px;
+}
+
+.gdet-pernum-plus.normal {
+  display: inline-block;
+  background: #ddd;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 2px;
+  color: #aaa;
+  line-height: 30px;
+}
+
+.gdet-pernum {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  margin: 0px 2px;
+  background: #eee;
+  overflow: initial;
+  color: #323232;
+  z-index: 0;
+  position: relative;
+}
+
+.gdet-der {
+  padding: 10px 15px;
+  display: block;
+  background: #fff;
+  margin-top: 10px;
+  color: #a4a4a4;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.my-navarbot {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.my-navarbot button {
+  width: 100%;
+  background: #dea639;
+  border-radius: 0px;
+  border: 1px solid #dea639;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  background: #ddd;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  background: #eee;
+}

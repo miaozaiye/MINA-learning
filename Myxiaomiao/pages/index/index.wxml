@@ -1,0 +1,28 @@
+<!--index.wxml-->
+ <!--首页导航条-->
+<view class="myblock"> 
+  <view wx:if="{{imgUrls}}">
+    <swiper class="my-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="false">
+  <!--   <block/> 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性-->
+      <block wx:key="id" wx:for="{{imgUrls}}" wx:for-item="itemImg">
+        <swiper-item>
+          <image data-id="{{itemImg.goods_id}}" bindtap="toDetailview" mode="aspectFill" src="http://img.xiaomiao.tv/{{itemImg.url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--一排三个商品布局-->
+
+  <ul class="three-warp">
+    <li wx:key="id" wx:for="{{activityList}}">
+      <view class="three-warpinner" data-id="{{item.id}}" bindtap="toDetailview">
+        <view class="three-per">
+          <image class="three-img" src="{{item.logo_url}}" />
+        </view>
+        <p class="three-title">{{item.title}}</p>
+        <span class="three-price">￥{{item.price}}</span> 
+      </view>
+    </li>
+  </ul>
+</view>

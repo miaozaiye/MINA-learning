@@ -1,0 +1,141 @@
+/* pages/Myindex/Myindex.wxss */
+
+page {
+  background: #f8f8f8;
+}
+
+.myblock {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/*我的订单--不同分类*/
+
+.my-naver {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  height: 50px;
+  border-bottom: 1px solid #323232;
+  background: #fff;
+}
+
+.my-naver li {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.my-naver li view {
+  width: 60%;
+  margin: 0 auto;
+  height: 48px;
+  line-height: 48px;
+}
+
+.my-naver li.active view {
+  width: 60%;
+  border-bottom: 2px solid #323232;
+  margin: 0 auto;
+  height: 48px;
+  line-height: 48px;
+}
+
+.myindex-ordernum {
+  background: #fff;
+  padding: 10px 15px;
+  margin: 15px 0px 3px 0px;
+  color: #555;
+}
+
+.paybtn {
+  float: right;
+  margin-top: -5px;
+  background: #dea639;
+  color: #fff;
+}
+
+.myindex-listinner {
+  padding: 10px 15px;
+}
+
+.myindex-listimg {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+.myindex-listdet {
+  width: calc(100% - 90px);
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.myindex-listdet .title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #323232;
+}
+
+.myindex-perwarp {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #7f7f7f;
+}
+
+.myindex-perinfo {
+  margin-right: 10px;
+}
+
+.myindex-perprice {
+  float: right;
+  font-weight: bold;
+}
+
+.myindex-orderdet {
+  background: #fff;
+  padding: 10px 15px;
+  color: #555;
+}
+
+.myindex-orderdet .order-p {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  color: #555;
+}
+
+.myindex-orderdet .order-t {
+  width: 50%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.myorder-info {
+  text-align: center;
+  padding: 20px 0px 10px 0px;
+}
+
+/*更多*/
+
+.order-more {
+  text-align: center;
+}
+
+.loginTitle {
+  text-align: center;
+  margin-top: 40%;
+    width: 30%;
+}

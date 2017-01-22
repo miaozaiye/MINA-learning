@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class ="box" placeholder = "try one"> Today's choice is 
+
+<view class="suggestion"> {{suggestion}} </view>
+</view>
+<image class="suggestion-img" src="{{suggestion_img}}" />
+
+
+
+<button bindtap="bindViewTap">change</button>
+
+
+

@@ -1,0 +1,26 @@
+<view class="myblock">
+
+	<view class="pay-title"><text></text>订单信息</view>
+	<view class="pay-orderinfo">
+		<view class="pay-list-per">订单编号：<text>{{orderdet.order_no}}</text></view>
+		<view class="pay-list-per">下单时间：<text>{{orderdet.create_time}}</text></view>
+		<view class="pay-list-per">订单金额：<text>￥{{orderdet.real_price}}</text></view>
+	</view>
+	
+	
+
+	<text class="pay-title"><text></text>请选择支付类型</text>
+	<view class="pay-warpbox">
+		<view class="pay-warp">
+			<view class="pay-perinfo"><image class="pay-img" src="../../public/image/feng01.jpg"/></view>
+			<view class="pay-perweb">微信支付</view>
+			<view class="pay-pericon"><icon type="success" size="35"/></view>
+		</view>
+	</view>
+
+	<view class="pay-btnbox">
+		<button type="primary" bindtap="pay" hover-class="myhover-btn">支付</button>
+	</view>
+	
+
+</view>

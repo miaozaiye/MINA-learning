@@ -1,0 +1,170 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+page {
+  background-color: #f2f2f2;
+}
+
+.myblock {
+  width: 100%;
+  clear: both;
+}
+
+/*首页导航条*/
+
+.my-naver {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  height: 50px;
+  border-bottom: 1px solid #565656;
+  background: #fff;
+}
+
+.my-naver li {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.my-naver li view {
+  width: 60%;
+  margin: 0 auto;
+  height: 48px;
+  line-height: 48px;
+}
+
+.my-naver li.active view {
+  width: 60%;
+  border-bottom: 2px solid #323232;
+  margin: 0 auto;
+  height: 48px;
+  line-height: 48px;
+}
+
+.my-swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 200px;
+}
+
+.swiper-item {
+  display: block;
+  height: 200px;
+}
+
+.see-block {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 15px;
+}
+
+.see-block .see-img {
+  width: 100%;
+  height: 200px;
+}
+
+.see-block .see-btn {
+  width: 28%;
+  height: 35px;
+  line-height: 35px;
+  position: absolute;
+  bottom: 25px;
+  left: 36%;
+  border: 1px solid #323232;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #323232;
+  background: #fff;
+}
+/*一排三个商品布局*/
+
+.three-warp {
+  padding-left: 9px;
+  padding-top: 9px;
+  display: block;
+}
+
+.three-warp li {
+  float: left;
+  width: 33.3333%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 9px 9px 0;
+}
+
+.three-warp li .three-warpinner {
+  background: #fff;
+  padding: 10px;
+}
+
+.three-warp li .three-per {
+  position: relative;
+  padding-top: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.three-warp li .three-per .three-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.three-warp li .three-title {
+  width: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top:6px;
+  height: 24px;
+  display: block;
+}
+
+.three-warp li .three-price {
+  width: 100%;
+  font-size: 18px;
+  color: #323232;
+  margin-top: 6px;
+  display: block;
+  font-weight: bold;
+}
+
+.three-warp li .three-price text {
+  font-size: 12px;
+  color: #f2f2f2;
+  font-weight: normal;
+  text-decoration: line-through;
+  margin-left: 8px;
+  display: none;
+}
